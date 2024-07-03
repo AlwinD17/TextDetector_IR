@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { LanguageSelector, CopyableText } from '@components';
 
-export const TranslatorPanel = ( {sourceText} ) => {
+export const TranslatorPanel = ( {sourceText, sourceAudio} ) => {
     const [sourceLanguage, setSourceLanguage] = useState('es');
     const [targetLanguage, setTargetLanguage] = useState('fr');
     const [translatedText, setTranslatedText] = useState('');
@@ -18,7 +18,7 @@ export const TranslatorPanel = ( {sourceText} ) => {
           <div className="flex flex-col sm:flex-col lg:flex-row justify-between items-center">
             <div className="flex flex-col items-center w-full sm:w-full lg:w-1/2">
               <LanguageSelector selectedLanguage={sourceLanguage} onChange={setSourceLanguage} />
-              <CopyableText text={sourceText} />
+              <CopyableText text={sourceText} audio={sourceAudio} />
             </div>
             <span className="mx-4 text-lg text-black my-4 lg:my-0 dark:text-white">⇄</span>
             <div className="flex flex-col items-center w-full sm:w-full lg:w-1/2">

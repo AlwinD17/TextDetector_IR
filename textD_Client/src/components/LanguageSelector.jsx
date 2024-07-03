@@ -1,10 +1,16 @@
 export const LanguageSelector = ({ selectedLanguage, onChange }) => {
     const languages = [
-      { code: 'fr', label: 'Francés' },
+      { code: 'de', label: 'Alemán'},
+      { code: 'ar', label: 'Árabe'},
+      { code: 'zh', label: 'Chino'},
+      { code: 'ko', label: 'Coreano'},
       { code: 'es', label: 'Español' },
+      { code: 'fr', label: 'Francés' },
       { code: 'en', label: 'Inglés' },
+      { code: 'it', label: 'Italiano'},
       { code: 'ja', label: 'Japonés' },
-      // Añade más idiomas según sea necesario
+      { code: 'pt', label: 'Portugués'},
+      { code: 'ru', label: 'Ruso'},
     ];
   
     return (

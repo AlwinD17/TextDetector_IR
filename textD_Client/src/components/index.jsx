@@ -6,6 +6,8 @@ import { Hero } from "./hero";
 import { LanguageSelector } from "./LanguageSelector";
 import { TranslatorPanel } from "./TranslatorPanel";
 import { Card } from "./Card";
+import { MultiSelect } from "./MultiSelect";
+
 export{
     ImageUploader,
     Header,
@@ -14,5 +16,6 @@ export{
     Hero,
     LanguageSelector,
     TranslatorPanel,
-    Card 
+    Card,
+    MultiSelect
 };
