@@ -26,7 +26,7 @@ function App() {
     },
     {
       paso: '2. Suba la imagen',
-      descripcion: 'Presione "Analizar Imagen" y espere los resultados.'
+      descripcion: 'Seleccione el modo y los idiomas a analizar, luego haga clic en "Analizar Imagen" y espere los resultados.'
     },
     {
       paso: '3. Pruebe las distintas opciones',

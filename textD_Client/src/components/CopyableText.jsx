@@ -12,12 +12,14 @@ export const CopyableText = ({ text, audio }) => {
     setTimeout(() => setCopied(false), 2000);
   };
 
+  const audioUrl = audio ? `data:audio/mp3;base64,${audio}` : '';
+
   const handleSpeak = () => {
     if (audioRef.current) {
       audioRef.current.pause();
       audioRef.current.currentTime = 0;
     }
-    audioRef.current = new Audio(audio);
+    audioRef.current = new Audio(audioUrl); // Use the data URL for audio playback
     audioRef.current.play();
   };
 

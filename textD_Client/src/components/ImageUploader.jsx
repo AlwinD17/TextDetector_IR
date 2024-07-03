@@ -76,17 +76,16 @@ export const ImageUploader = ({ setResponseText, setResponseAudio }) => {
         formData.append("languages", languageCodes);
 
         try {
-            const response = await axios.post("http://127.0.0.1:8000/detectionApi/posts/", formData, {
+            const response = await axios.post("http://127.0.0.1:8000/detectionApi/detectText/", formData, {
                 headers: {
                     "Content-Type": "multipart/form-data"
                 }
             });
 
             const { imageText, audioFile } = response.data;
-            const audioBlob = new Blob([new Uint8Array(atob(audioFile).split("").map(char => char.charCodeAt(0)))], { type: 'audio/mpeg' });
 
             setResponseText(imageText);
-            setResponseAudio(URL.createObjectURL(audioBlob));
+            setResponseAudio(audioFile);
         } catch (error) {
             console.error("Error al subir la imagen:", error);
             setError("Error al subir la imagen. Inténtalo de nuevo.");
